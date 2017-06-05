@@ -20,7 +20,7 @@ class nginx::config (
     mode    => $mode,
     owner   => $owner,
     group   => $group,
-    content => template("${module_name}/nginx.cof.erb"),
+    content => template("${module_name}/nginx.conf.erb"),
   }
 
   file { $log_dir: 
