@@ -1,0 +1,12 @@
+class nginx::install (
+
+  String $package_name = $::nginx::package_name,
+  String $ensure       = $::nginx::ensure,
+
+) {
+  package { 'install_nginx': 
+    ensure => $ensure,
+    name   => $package_name,
+  }
+
+}
