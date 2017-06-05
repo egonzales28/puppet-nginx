@@ -25,12 +25,12 @@ class nginx::config (
 
   file { $log_dir: 
     ensure  => directory,
-    recures => true,
+    recurse => true,
   }
 
   file { $docroot: 
     ensure  => directory,
-    recures => true,
+    recurse => true,
     mode    => $mode,
     owner   => $owner,
     group   => $group,
