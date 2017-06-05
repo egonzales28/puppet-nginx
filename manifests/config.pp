@@ -22,4 +22,17 @@ class nginx::config (
     group   => $group,
     content => template("${module_name}/nginx.cof.erb"),
   }
+
+  file { $log_dir: 
+    ensure  => directory,
+    recures => true,
+  }
+
+  file { $docroot: 
+    ensure  => directory,
+    recures => true,
+    mode    => $mode,
+    owner   => $owner,
+    group   => $group,
+  }
 }
